@@ -1,10 +1,144 @@
 :root {
-  --branco-principal: #ffffff;
-  --cinza-secundario: #c0c0c0;
-  --botao-azul: #167bf7;
-  --cor-de-fundo: #00030c;
+  --white-main: #ffffff;
+  --gray-secondary: #c0c0c0;
+  --button-blue: #167bf7;
+  --color-in-background: #00030c;
+
+  /*source*/
+  --font-main: "Inter";
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-color: var(--cor-de-fundo);
+  background-color: var(--color-in-background);
+  color: var(--white-main);
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.main {
+  background-image: url("img/Background.png");
+  background-repeat: no-repeat;
+  background-size: contain; /*fica apenas dentro da section*/
+  align-items: center;
+  text-align: center;
+}
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.container__button {
+  background-color: var(--button-blue);
+  border-radius: 5px;
+  padding: 1em;
+  color: var(--white-main);
+
+  display: block;
+  text-decoration: none;
+  margin-bottom: 1em;
+  transition: 1s all;
+}
+.container__button:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+.container__aviso {
+  font-size: 12px;
+  color: var(--gray-secondary);
+}
+
+.container__image {
+  margin: 1em 0 2em 0;
+}
+
+.container__title {
+  font-size: 28px;
+  font-weight: 700;
+}
+.container__box {
+  margin: 0 6em;
+}
+.button_secondary {
+  background-color: transparent;
+  border: 2px solid var(--white-main);
+}
+
+.secondary__image {
+  width: 80%;
+}
+.secondary {
+  align-items: center;
+  margin: 0 10em;
+}
+
+.description__title {
+  font-weight: 700;
+  font-size: 48px;
+  color: var(--white-main);
+  margin-bottom: 0.1em;
+}
+.description__text {
+  color: var(--gray-secondary);
+}
+
+.container__description {
+  padding: 2em;
+}
+
+.secondary__button {
+  display: inline-block;
+  margin-top: 1em;
+}
+
+.devices__list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 5em 0;
+}
+.devices {
+  text-align: center;
+}
+.devices__title {
+  font-size: 48px;
+}
+.list__item {
+  font-size: 32px;
+  color: var(--branco-principal);
+}
+
+.footer {
+  text-align: center;
+  margin: 5em 3em;
+}
+
+.footer__link {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-top: 1em;
+}
+
+.footer__text {
+  margin-top: 1em;
+  color: var(--gray-secondary);
+  font-size: 14px;
+}
+
+.list__link a {
+  color: var(--white-main);
+  text-decoration: none;
+  cursor: pointer;
+  transition: 1s all;
+}
+.list__link a:hover {
+  color: var(--button-blue);
+  transform: scale(1.1);
 }
